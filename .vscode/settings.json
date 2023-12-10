@@ -1,0 +1,4 @@
+{
+  "pypiAssistant.codeLens": false,
+  "rust-analyzer.linkedProjects": ["./Cargo.toml"]
+}
