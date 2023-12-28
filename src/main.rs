@@ -4,6 +4,8 @@ mod day1_1;
 mod day1_2;
 mod day2_1;
 mod day2_2;
+mod day3_1;
+mod day3_2;
 // TODO: Add more modules each day
 
 fn main() {
@@ -12,6 +14,8 @@ fn main() {
     map.insert("1_2", day1_2::run as fn());
     map.insert("2_1", day2_1::run as fn());
     map.insert("2_2", day2_2::run as fn());
+    map.insert("3_1", day3_1::run as fn());
+    map.insert("3_2", day3_2::run as fn());
     // TODO: Add more entries each day
 
     let args: Vec<String> = std::env::args().collect();
