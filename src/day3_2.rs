@@ -20,7 +20,7 @@ pub fn run() {
                 ) {
                     gears
                         .entry(neighboring_asterisk)
-                        .or_insert_with(Vec::new)
+                        .or_default()
                         .push(current_number.parse::<i32>().unwrap());
                 }
                 current_number = String::new();
@@ -35,7 +35,7 @@ pub fn run() {
             ) {
                 gears
                     .entry(neighboring_asterisk)
-                    .or_insert_with(Vec::new)
+                    .or_default()
                     .push(current_number.parse::<i32>().unwrap());
             }
         }

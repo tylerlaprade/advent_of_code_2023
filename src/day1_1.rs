@@ -9,7 +9,7 @@ pub fn run() {
             break;
         }
         for line in &group {
-            let digits: Vec<_> = line.chars().filter(|c| c.is_digit(10)).collect();
+            let digits: Vec<_> = line.chars().filter(|c| c.is_ascii_digit()).collect();
             if let (Some(&first), Some(&last)) = (digits.first(), digits.last()) {
                 let number = format!("{}{}", first, last).parse::<i32>().unwrap();
                 sum += number;

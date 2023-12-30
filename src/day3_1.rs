@@ -22,16 +22,14 @@ pub fn run() {
                 current_number = String::new();
             }
         }
-        if !current_number.is_empty() {
-            if has_neighboring_symbol(
+        if !current_number.is_empty() && has_neighboring_symbol(
                 &grid,
                 row.len() as isize - current_number.len() as isize,
                 row.len() as isize,
                 i as isize,
             ) {
-                let parsed_number: i32 = current_number.parse().unwrap();
-                sum += parsed_number;
-            }
+            let parsed_number: i32 = current_number.parse().unwrap();
+            sum += parsed_number;
         }
     }
 

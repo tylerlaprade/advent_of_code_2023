@@ -37,7 +37,7 @@ fn first_and_last_digit(s: &str) -> (char, char) {
     let mut current_word = String::new();
 
     for c in s.chars() {
-        if c.is_digit(10) {
+        if c.is_ascii_digit() {
             digits.push(c);
             current_word.clear();
         } else if c.is_alphabetic() {
