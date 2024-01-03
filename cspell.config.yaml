@@ -4,6 +4,7 @@ dictionaryDefinitions: []
 dictionaries: []
 words:
   - Deque
+  - itertools
   - peekable
 ignoreWords: []
 import: []
