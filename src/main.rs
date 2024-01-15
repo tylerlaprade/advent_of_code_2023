@@ -1,5 +1,7 @@
 use std::collections::HashMap;
 
+mod day10_1;
+mod day10_2;
 mod day1_1;
 mod day1_2;
 mod day2_1;
@@ -17,7 +19,6 @@ mod day7_2;
 mod day8_1;
 mod day9_1;
 mod day9_2;
-mod day10_1;
 // TODO: Add more modules each day
 
 fn main() {
@@ -40,6 +41,7 @@ fn main() {
     map.insert("9_1", day9_1::run as fn());
     map.insert("9_2", day9_2::run as fn());
     map.insert("10_1", day10_1::run as fn());
+    map.insert("10_2", day10_2::run as fn());
     // TODO: Add more entries each day
 
     let args: Vec<String> = std::env::args().collect();
