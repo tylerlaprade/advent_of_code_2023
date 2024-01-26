@@ -6,6 +6,9 @@ mod day11_1;
 mod day11_2;
 mod day14_1;
 mod day15_1;
+mod day16_1;
+mod day16_2;
+mod day16_shared;
 mod day1_1;
 mod day1_2;
 mod day2_1;
@@ -50,6 +53,8 @@ fn main() {
     map.insert("11_2", day11_2::run as fn());
     map.insert("14_1", day14_1::run as fn());
     map.insert("15_1", day15_1::run as fn());
+    map.insert("16_1", day16_1::run as fn());
+    map.insert("16_2", day16_2::run as fn());
     // TODO: Add more entries each day
 
     let args: Vec<String> = std::env::args().collect();
