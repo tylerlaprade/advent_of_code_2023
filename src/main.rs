@@ -10,6 +10,7 @@ mod day16_1;
 mod day16_2;
 mod day16_shared;
 mod day17_1;
+mod day17_shared;
 mod day1_1;
 mod day1_2;
 mod day2_1;
