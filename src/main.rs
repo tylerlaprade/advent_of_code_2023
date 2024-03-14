@@ -13,6 +13,7 @@ mod day18_1;
 mod day18_2;
 mod day18_shared;
 mod day19_1;
+mod day19_2;
 mod day1_1;
 mod day1_2;
 mod day2_1;
@@ -30,6 +31,7 @@ mod day7_2;
 mod day8_1;
 mod day9_1;
 mod day9_2;
+mod scratchpad;
 // TODO: Add more modules each day
 
 fn main() {
@@ -62,16 +64,25 @@ fn main() {
     map.insert("18_1", day18_1::run as fn());
     map.insert("18_2", day18_2::run as fn());
     map.insert("19_1", day19_1::run as fn());
+    map.insert("19_2", day19_2::run as fn());
+    map.insert("scratch", scratchpad::run as fn());
     // TODO: Add more entries each day
 
     let args: Vec<String> = std::env::args().collect();
 
-    if args.len() != 2 {
+    if args.len() == 3 {
         match map.get(format!("{}_{}", args[1].as_str(), args[2].as_str()).as_str()) {
             Some(&function) => function(),
             _ => println!("Invalid argument"),
         }
     } else {
-        println!("Requires exactly two arguments to specify which puzzle to run!");
+        if args.len() == 2 {
+            match map.get(args[1].as_str()) {
+                Some(&function) => function(),
+                _ => println!("Invalid argument"),
+            }
+        } else {
+            println!("Invalid argument");
+        }
     }
 }

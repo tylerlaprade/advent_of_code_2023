@@ -114,6 +114,8 @@ enum Condition {
 
 struct Always {}
 
+impl Always {}
+
 struct LessThan {
     field: String,
     value: usize,
